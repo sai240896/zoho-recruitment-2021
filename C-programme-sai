@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int x = 0,y = 0,z=0,i=0;
+    char string[50];
+    unsigned int rows = 0;
+    printf("Enter the string = ");
+    scanf("%u",&string);
+    rows= strlen(string);
+    for(x=1; x<=rows; ++x)
+    {
+       
+        for(y=x; y<rows; ++y)
+        {
+            printf(" ");
+        }
+        
+        for(y=1; y<=x; ++y)
+        {
+           for(z=(rows/2)+1; z<=rows;z++)
+            printf(" ",string[z]);
+            
+            if (z==rows)
+            for(i=0;i<(rows/2)+1;i++)
+            printf(" ",string[z])
+        }
+        
+        printf("\n");
+    }
+    return 0;
+}
